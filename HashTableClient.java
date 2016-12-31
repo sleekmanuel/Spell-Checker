@@ -17,13 +17,14 @@ import java.util.*;
 public class HashTableClient {
 	
 /*
- * Creates a LinkedList, ArrayList, HashMap and HashTable of  already implemented methods.
+ * Creates a LinkedList, ArrayList,Array, tHashMap and HashTable of  already implemented methods.
  */
 	static SeparateChainingHashTable<String> list = new SeparateChainingHashTable<>();
 	static LinkedList<String> ll = new LinkedList<String>();
 	static HashMap<String, LinkedList<String>> Correct = new HashMap<String , LinkedList<String>>();
 	static Scanner console = new Scanner(System.in);
 	static 	ArrayList<String> ar = new ArrayList<String>();
+	static char alph[] = {'a','b', 'c', 'd', 'e', 'f','g','h','i', 'j', 'k' , 'l', 'm', 'n', 'n', 'o', 'p', 'q', 'r', 's','t','u','v','w','x','y','z','\''};
 	
 	/*
 	 * 				-------Main Method -----------
@@ -150,7 +151,6 @@ public static ArrayList<String> OpenFile (SeparateChainingHashTable<String> h) {
  * Returns the the words that match the words in the SeparateChaining HashTable.
  */
 private static void ReplaceChar(String word) {
-	char alph[] = {'a','b', 'c', 'd', 'e', 'f','g','h','i', 'j', 'k' , 'l', 'm', 'n', 'n', 'o', 'p', 'q', 'r', 's','t','u','v','w','x','y','z','\''};
 	for(int i = 0; i < word.length(); i++){
 		for( int j = 0 ; j < alph.length; j++){
 			char[] temp = word.toCharArray();
@@ -191,7 +191,6 @@ private static void ExchChar(String word) {
  * SeparateChaining HashTable
  */
 public static void Addchar(String word ){
-	char alph[] = {'a','b', 'c', 'd', 'e', 'f','g','h','i', 'j', 'k' , 'l', 'm', 'n', 'n', 'o', 'p', 'q', 'r', 's','t','u','v','w','x','y','z','\''};
 		for(int i = 0; i< word.length()+1; i++){
 			for( int j = 0 ; j < alph.length; j++){
 				String newWord = word.substring(0, i) + alph[j] + word.substring(i) ;
